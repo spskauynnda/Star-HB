@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script type="text/javascript" src="js/plusStart.js"></script>	
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/about.css">
+		<style>
+			.title{
+				margin: 20px 15px 10px;
+				color: #DBD1CF;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+	<body style="height:120vh;background: -webkit-linear-gradient(to bottom, #0575E6, #021B79);background: linear-gradient(to bottom, #0575E6, #021B79);“ >
+		<div class="mui-content">
+			<div class="mui-slider">
+			  <div class="mui-slider-group mui-slider-loop">
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img class="banner-img" src="img/banner2.jpg" /></a></div>
+			    <div class="mui-slider-item" style="position: relative;">
+			  	  	<a href="#"><img class="banner-img" src="img/banner3.jpg" /></a>
+		  	  		<div class="header">
+						<div class="header-main">
+							<span>给星星的孩子许个未来</span>
+						</div>
+						<div class="header-sub">
+							<span>关爱你我爱的她</span>
+						</div>
+					</div>
+			    </div>
+			    <div class="mui-slider-item"><a href="#"><img class="banner-img" src="img/banner1.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img class="banner-img" src="img/banner2.jpg" /></a></div>
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img class="banner-img" src="img/banner3.jpg" /></a></div>
+			  </div>
+			</div>
+			
+			<!--<div class="header">
+				<div class="header-main">
+					<span>给星星的孩子许个未来</span>
+				</div>
+				<div class="header-sub">
+					<span>关爱你我爱的她</span>
+				</div>
+			</div>-->
+			<div class="main">
+				<div id="evaluate" class="mui-card card-box">
+					<div class="card-title">
+					    <span>在线评估</span>
+					</div>
+					<div class="mui-card-content" style="height:30vh;background-image:url(./img/func1.png);background-size:100% 100%"></div>
+					<!--<div class="mui-card-footer"></div>-->
+				</div>
+				<div class="mui-card card-box">
+					<div class="card-title">
+					    <span class="">能力训练</span>
+					</div>
+					<div class="mui-card-content" style="height:30vh;background-image:url(./img/func2.png);background-size:100% 100%">
+						
+					</div>
+					<!--<div class="mui-card-footer"></div>-->
+				</div>
+				<div class="mui-card card-box">
+					<div class="card-title">
+					    <span class="main-title">沟通助手</span>
+					</div>
+					<div class="mui-card-content" style="height:30vh;background-image:url(./img/func3.png);background-size:100% 100%">
+					</div>
+					<!--<div class="mui-card-footer"></div>-->
+				</div>
+				<div class="mui-card card-box">
+					<div class="card-title">
+					    <span class="main-title">辅助功能</span>
+					</div>
+					<div class="mui-card-content" style="height:30vh;background-image:url(./img/func4.png);background-size:100% 100%">
+						
+					</div>
+					<!--<div class="mui-card-footer"></div>-->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var sub = "evaluate.html"
+		var subpage_style = {
+				top: '45px',
+				bottom: '51px'
+			};
+		plus.webview.create(sub, sub, subpage_style);
+		document.getElementById("evaluate").addEventListener('tap',function () {
+			plus.webview.show('evaluate.html');
+			plus.webview.hide('tab-webview-subpage-about.html')
+		});
+		
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+		});	
+	</script>
+</html>

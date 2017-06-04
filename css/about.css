@@ -1,0 +1,48 @@
+.header {
+	height: 20vh;
+	position: absolute;
+	top: 15vh;
+	left: 25vw;
+	z-index: 100;
+}
+.header-main {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	height: 10vh;
+}
+.header-main span {
+	font-size: 20px;
+	color: #ffffff;
+}
+.header-sub {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 10vh;
+	margin-right: 12px;
+}
+.header-sub span {
+	color: #ffffff
+}
+.card-box {
+	width: 43vw;
+	height: 35vh;
+	display: inline-block;
+}
+.card-title {
+	height: 7vh;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	margin-left: 12px;
+	border-bottom:1px solid #d0d0d0;
+}
+.card-title span {
+	font-size: 14px;
+}
+.banner-img{
+	height:35vh
+}
